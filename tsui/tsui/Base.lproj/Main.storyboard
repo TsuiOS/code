@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nhE-bX-pBL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RPo-tL-Ee6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--私人通讯录-->
         <scene sceneID="MWm-0d-BOE">
             <objects>
                 <tableViewController id="nhE-bX-pBL" customClass="ViewController" customModule="tsui" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="vnO-Sg-rIJ" customClass="PersonCell" customModule="tsui" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vnO-Sg-rIJ" id="gTi-gB-lds">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
@@ -45,6 +45,7 @@
                                 <connections>
                                     <outlet property="ageLable" destination="fHg-dJ-7Dl" id="dng-Hd-avS"/>
                                     <outlet property="nameLable" destination="flb-TZ-I2P" id="JZE-Lv-PbM"/>
+                                    <segue destination="nST-23-iIq" kind="show" id="umK-HR-1oI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,8 +54,82 @@
                             <outlet property="delegate" destination="nhE-bX-pBL" id="lfH-Be-Ubc"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="私人通讯录" id="iHp-TE-GzQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPb-fy-D3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="329"/>
+        </scene>
+        <!--详细信息-->
+        <scene sceneID="QYX-BS-xr2">
+            <objects>
+                <viewController id="nST-23-iIq" customClass="DetailViewController" customModule="tsui" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l8B-bp-ily"/>
+                        <viewControllerLayoutGuide type="bottom" id="lkD-1T-6mJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rmv-Gh-pqE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="01U-ZN-BP1">
+                                <rect key="frame" x="106" y="128" width="388" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="nST-23-iIq" eventType="editingChanged" id="CKf-T4-RPw"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入年龄" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0Y-Mg-NLc">
+                                <rect key="frame" x="106" y="186" width="388" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="nST-23-iIq" eventType="editingChanged" id="ly0-FD-zql"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B0Y-Mg-NLc" firstAttribute="top" secondItem="01U-ZN-BP1" secondAttribute="bottom" constant="28" id="aaH-50-aRO"/>
+                            <constraint firstItem="01U-ZN-BP1" firstAttribute="top" secondItem="l8B-bp-ily" secondAttribute="bottom" constant="64" id="bpW-JQ-Swm"/>
+                            <constraint firstItem="01U-ZN-BP1" firstAttribute="leading" secondItem="Rmv-Gh-pqE" secondAttribute="leadingMargin" constant="86" id="erG-KG-8WP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="01U-ZN-BP1" secondAttribute="trailing" constant="86" id="mcG-I9-4gl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B0Y-Mg-NLc" secondAttribute="trailing" constant="86" id="x32-OM-V4q"/>
+                            <constraint firstItem="B0Y-Mg-NLc" firstAttribute="leading" secondItem="Rmv-Gh-pqE" secondAttribute="leadingMargin" constant="86" id="xXw-HC-ctU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="详细信息" id="xZs-pu-fbA">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="yo6-1K-9Wk">
+                            <connections>
+                                <action selector="save:" destination="nST-23-iIq" id="HLQ-H8-9qc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ageTextField" destination="B0Y-Mg-NLc" id="AMb-ok-xjK"/>
+                        <outlet property="nameTextField" destination="01U-ZN-BP1" id="YmG-hf-FvK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hR6-dd-hqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757" y="329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="exg-JE-b42">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RPo-tL-Ee6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sod-gT-KFl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nhE-bX-pBL" kind="relationship" relationship="rootViewController" id="tkq-Hk-mCQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sw6-bd-yfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242" y="329"/>
         </scene>
