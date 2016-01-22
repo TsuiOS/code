@@ -32,9 +32,11 @@ extension ViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        // 使用 as 转换类型
+        // 通常使用 as 的时候，需要使用 ?/! => 根据前面函数的返回值来决定
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! PersonCell
         
-        cell.textLabel?.text = personInfo![indexPath.row].name
+        cell.person = personInfo![indexPath.row]
         return cell
     }
 
