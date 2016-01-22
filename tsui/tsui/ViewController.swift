@@ -21,7 +21,19 @@ class ViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-
+    //跳转之前的准备工作
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //1.拿到目标控制
+        guard let detailVC = segue.destinationViewController as? DetailViewController else {
+            return;
+        }
+        //2.获取用户当前选中的行的数据
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return;
+        }
+        //3.传递数据
+        detailVC.person = personInfo![indexPath.row]
+    }
 
 }
 // MARK: - 数据源方法

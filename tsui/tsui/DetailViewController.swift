@@ -9,27 +9,33 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    //个人数据模型
+    var person: Person?
 
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     
     //文本变化
-    @IBAction func textChanged(sender: AnyObject) {
+    @IBAction func textChanged() {
         //如果两个输入框都有内容,才可以保存
         navigationItem.rightBarButtonItem?.enabled = nameTextField.hasText() && ageTextField.hasText()
         
         
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
     //保存
     @IBAction func save(sender: AnyObject) {
         
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        nameTextField.text = person?.name
+        ageTextField.text = "\(person?.age ?? 0)"
+        textChanged()
+    }
+    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -77,7 +77,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="textChanged:" destination="nST-23-iIq" eventType="editingChanged" id="CKf-T4-RPw"/>
+                                    <action selector="textChanged" destination="nST-23-iIq" eventType="editingChanged" id="zC4-se-XOQ"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入年龄" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0Y-Mg-NLc">
@@ -85,7 +85,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="textChanged:" destination="nST-23-iIq" eventType="editingChanged" id="ly0-FD-zql"/>
+                                    <action selector="textChanged" destination="nST-23-iIq" eventType="editingChanged" id="mCU-yN-t4q"/>
                                 </connections>
                             </textField>
                         </subviews>
