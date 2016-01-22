@@ -12,6 +12,9 @@ class DetailViewController: UIViewController {
     
     //个人数据模型
     var person: Person?
+    
+    //定义闭包属性
+    var didSaveCallBack: (() -> ())?
 
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -25,6 +28,14 @@ class DetailViewController: UIViewController {
     }
     //保存
     @IBAction func save(sender: AnyObject) {
+        person?.name = nameTextField.text
+        // 第一个 ! 保证字符串一定有内容
+        // 第二个 ! 保证一定能转换成整数
+        person?.age = Int(ageTextField.text!) ?? 0
+        
+        didSaveCallBack?()
+        //关闭控制器
+        navigationController?.popViewControllerAnimated(true)
         
     }
     override func viewDidLoad() {

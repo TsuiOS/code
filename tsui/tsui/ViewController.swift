@@ -33,7 +33,17 @@ class ViewController: UITableViewController {
         }
         //3.传递数据
         detailVC.person = personInfo![indexPath.row]
+        
+        //4.完成回调
+        
+        detailVC.didSaveCallBack = {
+        
+            self.tableView.reloadData()
+        }
+    
+        
     }
+        
 
 }
 // MARK: - 数据源方法
