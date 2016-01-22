@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Swift
+//  tsui
 //
 //  Created by Tsui on 16/1/22.
 //  Copyright © 2016年 TsuiX. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

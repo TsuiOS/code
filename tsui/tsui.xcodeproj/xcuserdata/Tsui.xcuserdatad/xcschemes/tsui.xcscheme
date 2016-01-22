@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "05F2455A1C51CD0C002064FB"
-               BuildableName = "Swift.app"
-               BlueprintName = "Swift"
-               ReferencedContainer = "container:Swift.xcodeproj">
+               BlueprintIdentifier = "0515AB661C51E34A00C5ADA2"
+               BuildableName = "tsui.app"
+               BlueprintName = "tsui"
+               ReferencedContainer = "container:tsui.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "05F2455A1C51CD0C002064FB"
-            BuildableName = "Swift.app"
-            BlueprintName = "Swift"
-            ReferencedContainer = "container:Swift.xcodeproj">
+            BlueprintIdentifier = "0515AB661C51E34A00C5ADA2"
+            BuildableName = "tsui.app"
+            BlueprintName = "tsui"
+            ReferencedContainer = "container:tsui.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "05F2455A1C51CD0C002064FB"
-            BuildableName = "Swift.app"
-            BlueprintName = "Swift"
-            ReferencedContainer = "container:Swift.xcodeproj">
+            BlueprintIdentifier = "0515AB661C51E34A00C5ADA2"
+            BuildableName = "tsui.app"
+            BlueprintName = "tsui"
+            ReferencedContainer = "container:tsui.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "05F2455A1C51CD0C002064FB"
-            BuildableName = "Swift.app"
-            BlueprintName = "Swift"
-            ReferencedContainer = "container:Swift.xcodeproj">
+            BlueprintIdentifier = "0515AB661C51E34A00C5ADA2"
+            BuildableName = "tsui.app"
+            BlueprintName = "tsui"
+            ReferencedContainer = "container:tsui.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

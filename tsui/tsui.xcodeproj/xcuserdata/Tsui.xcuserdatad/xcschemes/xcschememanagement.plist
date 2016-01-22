@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Swift.xcscheme</key>
+		<key>tsui.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>05F2455A1C51CD0C002064FB</key>
+		<key>0515AB661C51E34A00C5ADA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
